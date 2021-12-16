@@ -6,23 +6,17 @@ function Login() {
   const { authenticate } = useMoralis();
   return (
     <div className="relative h-screen">
-      <div className="flex flex-col absolute z-10 h-4/6 w-full items-center justify-center gap-8">
+      <div className="flex flex-col absolute z-10 w-full items-center justify-center gap-8 h-screen my-auto">
         <Image
           src="https://links.papareact.com/3pi"
           className="rounded-full object-cover"
-          width={300}
-          height={300}
+          width={256}
+          height={256}
         />
+        <p>Enter the #PAPAFAM Metaverse</p>
         <div>
           <Button label="Login" onClick={authenticate} />
         </div>
-      </div>
-      <div className="w-full h-screen absolute">
-        <Image
-          src="https://links.papareact.com/55n"
-          layout="fill"
-          objectFit="cover"
-        />
       </div>
     </div>
   );
