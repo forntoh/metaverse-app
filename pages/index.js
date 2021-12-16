@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useMoralis } from "react-moralis";
 
 export default function Home() {
-  const { isAuthenticated, logout } = useMoralis();
+  const { isAuthenticated, logout, user } = useMoralis();
 
   if (!isAuthenticated) return <Login />;
 
@@ -14,9 +14,8 @@ export default function Home() {
         <title>Meteverse Challenge</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-center">
-        Welcome to the METAVERSE 5 DAY CHALLENGE PAPAFAM
-      </h1>
+      <h2 className="text-center">Welcome to the METAVERSE 5 DAY CHALLENGE</h2>
+      User ID: {user.id}
       <Button label="Logout" onClick={logout} />
     </div>
   );
